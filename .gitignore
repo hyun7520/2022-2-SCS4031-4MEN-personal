@@ -1,0 +1,5 @@
+mysite/__pycache__/
+chat/__pycache__/
+chat/migrations/
+secrets.json
+
