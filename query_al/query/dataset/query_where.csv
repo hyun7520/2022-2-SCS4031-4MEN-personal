@@ -1,0 +1,41 @@
+﻿Q,A,label
+{tag_people}(이)가 어디를 때렸는지 알려주세요.,{tag_body}였어요,1
+{tag_place}에서 맞으면서 어디 어디가 많이 아팠나요? ,{tag_body}였어요,1
+{tag_place}에서 맞은 곳을 전부 알려주세요.,{tag_body}였어요,1
+{tag_people}(이)가 때릴 때 어디를 때렸는지 기억나요?,"네, 아니오, 잘모르겠어요",0
+몸에 멍이 들거나 상처가 난 부분이 있나요?,"네, 아니오, 잘모르겠어요",0
+몸에 상처나 멍이 없다라도 {tag_people}(이)가 때려서 아픈 곳을 말해주세요.,{tag_body}였어요,1
+{tag_people}(이)가 어디 어디를 {tag_object}(으)로 때렸나요?,{tag_body}였어요,1
+{tag_time}때 맞은 부분을 모두 알려주세요.,{tag_body}였어요,1
+{tag_time}에 {tag_place}에서 맞았다고 했잖아요? 그 날 어디어디를 맞았는지 말해주세요.,{tag_body}였어요,1
+{tag_people}(이)가 때려서 상처가 났나요?,"네, 아니오, 잘모르겠어요",0
+그럼 상처가 난 부분을 모두 알려주세요.,{tag_body}였어요,1
+{tag_time}때 {tag_people}(이)가 때린 곳을 모두 알려주세요.,{tag_body}였어요,1
+{tag_time}때 {tag_people}(이)가 {tag_object}(으)로 어디어디를 때렸어요?,{tag_body}였어요,1
+{tag_object}(으)로 맞아서 다친 곳이 있나요?,,0
+{tag_people}(이)가 {tag_object}(으)로 어디를 때렸는지 기억나요?,,0
+{tag_people}(이)가 {tag_object}(으)로 어디를 때렸는지 말해줄 수 있어요?,,0
+{tag_people}(이)가 몸 어디어디를 때렸나요?,,1
+{tag_object}(으)로 몸 어디어디를 맞았는지 알려주세요.,,1
+{tag_object}(으)로 맞은 곳이 어디어디인지 기억나요?,,0
+{tag_place}에서 {tag_object}(으)로 어디를 맞았는지 알려주세요.,,1
+{tag_place}에서 {tag_people}(이)가 어디어디를 때렸나요?,,1
+{tag_people}(이)가 {tag_time}때 때린 곳이 어디어디에요?,,1
+{tag_time}때 {tag_people}(이)가 몸 어디를 때렸는지 기억나요?,,0
+{tag_people}(이)가 {tag_time}때 {tag_object}(으)로 때린 곳이 어디인지 기억나요?,,0
+{tag_people}(이)가 {tag_time}때 {tag_object}(으)로 몸 어디어디를 때렸나요?,,1
+{tag_object}(으)로 맞은 곳을 모두 알려주세요.,,1
+{tag_time}때 {tag_place}에서 맞은 곳이 어디어디죠?,,1
+{tag_time}때 {tag_place}에서 {tag_people}에게 맞은 부분이 기억나나요?,,0
+{tag_people}(이)가 때린 부분이 어디어디인지 기억나요?,,0
+{tag_time}때 {tag_object}(으)로 어디를 맞았는지 말해줄 수 있어요?,,0
+{tag_object}(으)로 맞은 곳이 기억나나요?,,0
+{tag_people}(이)가 {tag_object}(으)로 때린 부분이 기억나요?,,0
+{tag_place}에서 {tag_people}(이)가 때린 곳이 어디어디인지 알려줄 수 있어요?,,0
+{tag_place}에서 {tag_people}(이)가 어디를 때렸는지 기억나요?,,0
+{tag_time}때 {tag_people}(이)가 {tag_object}(으)로 때린 곳을 알려주세요.,,1
+{tag_object}(으)로 {tag_time}때 맞은 곳이 어디어디에요?,,1
+{tag_place}에서 {tag_object}(으)로 맞은 곳을 모두 알려주세요.,,1
+{tag_people}(이)가 {tag_place}에서 장애인님의 어디를 때렸는지 기억나요?,,0
+{tag_people}(이)가 {tag_place}에서 때린 곳이 어디어디에요?,,1
+{tag_object}(으)로 {tag_time}때 맞은 곳이 어디에요?,,1
