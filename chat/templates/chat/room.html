@@ -5,26 +5,118 @@
     <meta charset="utf-8"/>
     <title>Chat Room</title>
 </head>
+
+<style>
+    body {
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+    
+    .container {
+      border: 2px solid #dedede;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    
+    .darker {
+      border-color: #ccc;
+      background-color: #ddd;
+    }
+    
+    .container::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    .container img {
+      float: left;
+      max-width: 60px;
+      width: 100%;
+      margin-right: 20px;
+      border-radius: 50%;
+    }
+    
+    .container img.right {
+      float: right;
+      margin-left: 20px;
+      margin-right:0;
+    }
+    
+    .time-right {
+      float: right;
+      color: #aaa;
+    }
+    
+    .time-left {
+      float: left;
+      color: #999;
+    }
+    </style>
+
 <body>
-    <textarea id="chat-log" cols="100" rows="20"></textarea><br>
+
+    <style>
+        input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+    
+        input[type=button] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+    
+        input[type=button]:hover {
+        background-color: #45a049;
+        }
+    
+        div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        /* padding: 20px; */
+        }
+    </style>
+    
+    <div id="chat-log" contenteditable="true" style="width: 50em; height: max-content; border: 1px solid; padding: 5px;">
+        질문을 시작하겠습니다.<br><br>
+        최대한 모두 대답해주세요. '네'를 입력하면 질문이 시작됩니다.<br>
+    </div>
+    <!-- <textarea id="chat-log" cols="100" rows="20"></textarea><br> -->
     <input id="chat-message-input" type="text" size="100"><br>
     <input id="chat-message-submit" type="button" value="Send">
-    <img src="">
-    {{ room_name|json_script:"room-name" }}
+
+    {{ room_name|json_script:"user-name" }}
     <script>
-        const roomName = JSON.parse(document.getElementById('room-name').textContent);
+        const userName = JSON.parse(document.getElementById('user-name').textContent);
 
         const chatSocket = new WebSocket(
             'ws://'
             + window.location.host
             + '/ws/chat/'
-            + roomName
+            + userName
             + '/'
         );
 
         chatSocket.onmessage = function(e) {
             const data = JSON.parse(e.data);
-            document.querySelector('#chat-log').value += (data.message + '\n');
+            
+            var container = document.querySelector('#chat-log');
+            container.innerHTML += (userName + ' : ' + data.message + '<div>' + '<div>');
         };
 
         chatSocket.onclose = function(e) {
@@ -41,12 +133,9 @@
         document.querySelector('#chat-message-submit').onclick = function(e) {
             var messageInputDom = document.querySelector('#chat-message-input');
             var message = messageInputDom.value;
-            if (message.indexOf('폭행') >= 0 || message.indexOf('맞') >= 0) {
-                message = '폭행을 당한적이 있습니까?'
-
-            }
+            
             chatSocket.send(JSON.stringify({
-                'message': message
+                'message': message,
             }));
             messageInputDom.value = '';
         };
